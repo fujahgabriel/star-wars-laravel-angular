@@ -1,0 +1,68 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>account_box</mat-icon>
+    </button>
+    <h1>{{title}}</h1>
+    <span class="menu-spacer"></span>
+  </mat-toolbar-row>
+
+
+
+</mat-toolbar>
+<!--/.Navbar-->
+<div class="container">
+    <header class="jumbotron my-4">
+      <h1>Characters</h1>
+    <span style="font-size: 12px;">List of StarWars characters</span>
+    </header>
+</div>
+
+<!-- Page Content -->
+<div class="container mt-4 ">
+
+  <div class="row">
+      <mat-spinner class="center"  *ngIf="spinner"></mat-spinner>
+    <ng-container *ngFor="let people of peoples">
+      <div class="col-md-4 mb-4">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>rowing</mat-icon> {{people.name}}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item>
+                <span mat-line>Height</span>
+                <span>{{people.height}}</span>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <span mat-line>Hair Color</span>
+                <span>{{people.hair_color}}</span>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <span mat-line>Skin Color</span>
+                <span>{{people.skin_color}}</span>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <span mat-line>Eye Color</span>
+                <span>{{people.eye_color}}</span>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <span mat-line>DOB </span>
+                <span>{{people.birth_year}}</span>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,32 @@
+.mat-flat-button{
+    float: right !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end !important;
+}
+.menu-spacer{
+    border-bottom: solid thin #fff;
+    height: 1px;
+}
+.mat-card {
+    background: #85024e !important;
+    color:#fff !important;
+}
+.mat-list-base .mat-list-item {
+    color: #fff;
+    font-size:13px; 
+}
+.mat-raised-button.mat-small{
+padding: 4px !important;
+
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    justify-content:center;
+    align-items: center !important;
+    
+}
